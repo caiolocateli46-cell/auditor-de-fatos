@@ -24,8 +24,9 @@ document.getElementById('verify-btn').addEventListener('click', async () => {
 
   try {
     const hasFile = fileInput.files && fileInput.files.length > 0;
-    
-    const response = await fetch('http://localhost:3000/api/verify', {
+
+    //  AQUI ESTÁ A CORREÇÃO IMPORTANTE
+    const response = await fetch(`${window.location.origin}/api/verify`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -39,7 +40,7 @@ document.getElementById('verify-btn').addEventListener('click', async () => {
     if (data.error === "API_KEY_MISSING") {
       statusText.innerText = 'ERRO DE CONFIGURAÇÃO';
       statusText.style.color = '#b00';
-      details.innerText = 'O servidor backend está rodando, mas falta a chave GEMINI_API_KEY no arquivo .env.';
+      details.innerText = 'O servidor backend está rodando, mas falta a chave GEMINI_API_KEY no ambiente.';
       btn.innerText = 'TENTAR NOVAMENTE';
       btn.disabled = false;
       return;
@@ -67,7 +68,7 @@ document.getElementById('verify-btn').addEventListener('click', async () => {
     console.error('Erro:', error);
     statusText.innerText = 'SERVIDOR OFFLINE';
     statusText.style.color = '#b00';
-    details.innerText = 'Não foi possível conectar ao servidor de auditoria local (localhost:3000). Certifique-se de que o backend está rodando.';
+    details.innerText = 'Não foi possível conectar ao servidor online.';
   } finally {
     btn.disabled = false;
     btn.innerText = 'NOVA AUDITORIA';
