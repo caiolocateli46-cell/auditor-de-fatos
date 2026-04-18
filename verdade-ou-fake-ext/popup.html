@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-main">AUDITOR DE INFORMAÇÃO</div>
+      <div class="subtitle">Protocolo de Verificação v1.0.4</div>
+    </header>
+    
+    <main>
+      <div class="input-section">
+        <label for="info-input">DADOS PARA ANÁLISE:</label>
+        <textarea id="info-input" placeholder="Insira texto, URL ou descrição da mídia..."></textarea>
+        <div class="file-input-wrapper">
+          <label for="file-input" class="file-label">ANEXAR MÍDIA (OPCIONAL):</label>
+          <input type="file" id="file-input" accept="image/*">
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button id="verify-btn">SUBMETER PARA AUDITORIA</button>
+      </div>
+
+      <div id="result-area" class="hidden">
+        <div class="divider"></div>
+        <div class="status-label">RELATÓRIO DE INTEGRIDADE:</div>
+        <div id="status-text">PROCESSANDO...</div>
+        <div class="confidence-container">
+          <div class="conf-label">CONFIABILIDADE:</div>
+          <div id="confidence-bar"><div id="confidence-fill"></div></div>
+        </div>
+        <div id="details">
+          Os dados foram cruzados com registros públicos e padrões de desinformação conhecidos.
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <span>ID DO TERMINAL: 882-J-2026</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

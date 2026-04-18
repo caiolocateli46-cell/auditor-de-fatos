@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Auditor de Fatos",
+  "version": "1.0",
+  "description": "Verifica se uma informação é real ou falsa sem frescuras.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab"]
+}

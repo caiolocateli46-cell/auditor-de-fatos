@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUDITOR DE FATOS - Central de Verificação</title>
+    <link rel="stylesheet" href="auditor_style.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <nav class="navbar">
+            <div class="nav-logo">AUDITOR_SYSTEM_v1.0.4</div>
+            <div class="nav-links">
+                <a href="#auditoria">AUDITORIA</a>
+                <a href="#como-funciona">PROTOCOLO</a>
+                <a href="#sobre">SOBRE</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <h1>SISTEMA CENTRAL DE AUDITORIA DE INFORMAÇÃO</h1>
+            <p>Verificação de integridade de dados em tempo real via Inteligência Artificial Distribuída.</p>
+        </section>
+
+        <main id="auditoria" class="container">
+            <header>
+                <div class="header-main">TERMINAL DE ENTRADA</div>
+                <div class="subtitle">Insira os dados para análise de veracidade</div>
+            </header>
+            
+            <div class="input-section">
+                <label for="info-input">TEXTO OU URL PARA ANÁLISE:</label>
+                <textarea id="info-input" placeholder="Ex: 'O presidente anunciou nova lei...' ou 'http://site-suspeito.com'"></textarea>
+                
+                <div class="file-input-wrapper">
+                    <label for="file-input" class="file-label">ANEXAR EVIDÊNCIA MÍDIA (OPCIONAL):</label>
+                    <input type="file" id="file-input" accept="image/*">
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button id="verify-btn">INICIAR PROTOCOLO DE AUDITORIA</button>
+            </div>
+
+            <div id="result-area" class="hidden">
+                <div class="divider"></div>
+                <div class="status-label">RELATÓRIO DE INTEGRIDADE:</div>
+                <div id="status-text">PROCESSANDO...</div>
+                <div class="confidence-container">
+                    <div class="conf-label">CONFIABILIDADE DOS DADOS:</div>
+                    <div id="confidence-bar"><div id="confidence-fill"></div></div>
+                </div>
+                <div id="details">
+                    Cruzando informações com bases de dados globais e registros históricos oficiais.
+                </div>
+            </div>
+        </main>
+
+        <section id="como-funciona" class="info-section">
+            <h2>PROTOCOLO DE FUNCIONAMENTO</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>01. EXTRAÇÃO</h3>
+                    <p>O sistema identifica entidades, datas e afirmações chave no texto fornecido.</p>
+                </div>
+                <div class="info-card">
+                    <h3>02. CRUZAMENTO</h3>
+                    <p>Busca ativa em registros oficiais, agências de notícias e bases de dados de desinformação.</p>
+                </div>
+                <div class="info-card">
+                    <h3>03. VEREDITO</h3>
+                    <p>A IA gera um score de confiança baseado na consistência das fontes encontradas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="info-section alternate">
+            <h2>SOBRE O PROJETO</h2>
+            <p>Este sistema foi desenvolvido como uma ferramenta de utilidade pública para combater a propagação de notícias falsas e desinformação digital. Utiliza tecnologia de ponta em processamento de linguagem natural para fornecer auditorias rápidas e técnicas.</p>
+            <div class="terminal-footer-info">
+                SISTEMA OPERACIONAL: AUDITOR-OS<br>
+                ESTADO DO SERVIDOR: <span class="online-pulse">ONLINE</span><br>
+                ACESSO: TRABALHO ESCOLAR v1.0
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <span>© 2026 AUDITOR DE FATOS - TODOS OS DIREITOS RESERVADOS</span>
+                <span>TERMINAL_ID: 882-J-2026</span>
+            </div>
+        </footer>
+    </div>
+    <script src="auditor_script.js"></script>
+</body>
+</html>
