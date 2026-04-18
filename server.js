@@ -14,14 +14,19 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const cache = new NodeCache({ stdTTL: 3600 }); // Cache de 1 hora
 
-// Clientes das IAs
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
-const cohere = new CohereClient({ token: process.env.COHERE_API_KEY });
-
+// Configuração de CORS robusta para aceitar a extensão
+app.use(cors({
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(cors());
 app.use(express.json({ limit: '10mb' }));
+
+// Rota de Health Check para validar se o servidor acordou
+app.get('/api/health', (req, res) => {
+    res.json({ status: "ONLINE", timestamp: new Date().toISOString() });
+});
 
 // --- PERSONALIDADES E PESOS ---
 const AI_CONFIG = {
