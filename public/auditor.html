@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA AGÊNTICO - Auditor de Fatos v2.0</title>
+    <link rel="stylesheet" href="auditor_style.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <nav class="navbar">
+            <div class="nav-logo">AGENT_FORCE_ORCHESTRATOR_v2.0</div>
+            <div class="nav-status">STATUS: <span class="online-pulse">ACTIVE_REVENUE_GROWTH</span></div>
+        </nav>
+
+        <header class="hero">
+            <h1>CENTRAL DE INTELIGÊNCIA AGÊNTICA</h1>
+            <p>Orquestração distribuída de agentes autônomos para validação de integridade informacional.</p>
+        </header>
+
+        <main class="dashboard">
+            <div class="main-panel">
+                <section id="auditoria" class="card auditor-card">
+                    <div class="card-header">TERMINAL DE COMANDO AGÊNTICO</div>
+                    <div class="input-area">
+                        <label>ENTRADA DE DADOS (TEXTO OU URL):</label>
+                        <textarea id="info-input" placeholder="Insira dados, fatos ou links para auditoria agêntica..."></textarea>
+                        <button id="verify-btn">EXECUTAR ORQUESTRADOR</button>
+                    </div>
+
+                    <div id="result-area" class="hidden">
+                        <div class="status-box">
+                            <div class="status-label">VEREDITO_FINAL:</div>
+                            <div id="status-text">ANALISANDO...</div>
+                        </div>
+                        <div class="score-box">
+                            <div class="score-label">CONFIABILIDADE_AGÊNTICA:</div>
+                            <div class="progress-bar"><div id="confidence-fill"></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="card logs-card">
+                    <div class="card-header">LOGS DE ORQUESTRAÇÃO EM TEMPO REAL</div>
+                    <div id="debate-log" class="terminal-log">
+                        <div class="log-entry">> Aguardando comando inicial...</div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="side-panel">
+                <div class="card stats-card">
+                    <div class="card-header">AGENTES_ATIVOS</div>
+                    <ul class="agent-list">
+                        <li><span class="dot alpha"></span> ALPHA (GEMINI) - DADOS</li>
+                        <li><span class="dot gamma"></span> GAMMA (OPENAI) - LÓGICA</li>
+                        <li><span class="dot beta"></span> BETA (DEEPSEEK) - SPEED</li>
+                        <li><span class="dot delta"></span> DELTA (COHERE) - CONTEXTO</li>
+                        <li><span class="dot ultra"></span> ULTRA (GROQ) - PERF</li>
+                    </ul>
+                </div>
+                <div class="card cache-card">
+                    <div class="card-header">SISTEMA_DE_CACHE</div>
+                    <div class="cache-info">STATUS: <span id="cache-status">PERSISTENT_RAM</span></div>
+                </div>
+            </aside>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-info">
+                <span>TERMINAL_ID: AGENT-992-X</span>
+                <span>DATA_STREAM: v2.0.4-ENTERPRISE</span>
+            </div>
+        </footer>
+    </div>
+    <script src="auditor_script.js"></script>
+</body>
+</html>
